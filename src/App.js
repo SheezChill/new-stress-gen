@@ -66,7 +66,7 @@ function App() {
           }
         </div>
       </div>
-    <div className="output" dangerouslySetInnerHTML={{ __html: rawName ? currentTemplate : 'Input name' }}></div>
+    <div className="output" dangerouslySetInnerHTML={{ __html: rawName ? rawName === "sheez" ? 'No.' : currentTemplate : 'Input name' }}></div>
     </div>
   );
 }
