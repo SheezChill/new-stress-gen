@@ -1,0 +1,120 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #121212;
+  color: #999;
+}
+
+.App {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wrap {
+  position: relative;
+  font-family: system-ui;
+  width: fit-content;
+  
+  &.populated {
+    input {
+      border-bottom-color: #fdd3b4;
+    }
+    
+    label {
+      transform: translateY(-100%);
+    }
+  }
+  
+  label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 150ms ease;
+    font-size: 12px;
+    width: 100%;
+    padding-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  input {
+    position: relative;
+    background: none;
+    border: none;
+    border-bottom: 1px dotted #999;
+    padding: 0;
+    padding-bottom: 8px;
+    color: #fdd3b4;
+    transition: border 150ms ease;
+    
+    &:focus {
+      outline: none;
+      
+      & + label {
+        transform: translateY(-100%);
+      }
+    }
+  }
+}
+
+.buttons-container {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+
+  &:hover .highlight {
+    opacity: 1;
+  }
+
+  .highlight {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    background: #333;
+    z-index: -1;
+    height: 32px;
+    border-radius: 4px;
+    transition: width ease 0.15s, transform ease 0.15s, opacity ease 0.15s;
+    opacity: 0;
+  }
+
+  button {
+    color: #888;
+    background: none;
+    border: none;
+    padding: 16px 12px;
+    transition: color 0.2s ease;
+    border-bottom: 2px solid transparent;
+    font-family: system-ui;
+    text-transform: capitalize;
+
+    &.active {
+      color: #fdd3b4;
+    }
+
+    &:hover {
+      color: #fdd3b4;
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+p {
+  margin: 0;
+  font-weight: 600;
+}
+
+strong {
+  color: #fdd3b4;
+}
+
+.output {
+  color: #bbb;
+  user-select: all;
+}
