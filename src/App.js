@@ -48,7 +48,7 @@ function App() {
         <input type="text" className="input" maxLength="20" spellCheck="false" value={rawName} onKeyUp={e => populatedListener(e)} onChange={e => setRawName(e.target.value.toLowerCase())} />
         <label>Name</label>
       </div>
-      <div>
+      <div className="templates-container">
         <p>Templates</p>
         <div className="buttons-container">
           <div 
