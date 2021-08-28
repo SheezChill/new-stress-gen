@@ -55,7 +55,7 @@ function App() {
             className="highlight"
             style={{
               width: currentHovered.offsetWidth || 0,
-              transform: `translate(${currentHovered.offsetLeft || 0}px)`,
+              transform: `translate(${currentHovered.offsetLeft || 0}px, ${currentHovered.offsetLeft || 0}px)`,
               transitionDuration: hoveredBefore.current instanceof HTMLButtonElement ? '150ms' : '0ms'
             }}
           ></div>
